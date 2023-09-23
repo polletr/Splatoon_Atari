@@ -57,8 +57,6 @@ public class GroundManager : MonoBehaviour
         #endregion
         for (int i = 0; i < squarePositions.Length; i++)
         {
-            Debug.Log("Loop" + i);
-
             Instantiate(squarePrefab, squarePositions[i], Quaternion.identity);
         }
 
