@@ -114,3 +114,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82601100ffc3bf141a51110bcf99a1c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  laserBeam: {fileID: 647720825119124714}

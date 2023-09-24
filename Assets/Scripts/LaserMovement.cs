@@ -4,22 +4,34 @@ using UnityEngine;
 
 public class LaserMovement : MonoBehaviour
 {
+    float speed = 5f;
 
-    float speed = 8f;
+    Vector3 direction;
+
+
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
+    public void InitializeMovement()
+    {
+        direction = Random.insideUnitCircle.normalized;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.up * Time.deltaTime * speed);
-        if(transform.position.x >= 5)
+        transform.Translate(direction * Time.deltaTime * speed);
+        if(!IsInCameraView())
         {
             Destroy(gameObject);
         }
          
+    }
+    bool IsInCameraView()
+    {
+        return true;
     }
 }

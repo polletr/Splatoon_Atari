@@ -124,6 +124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f8ad24dc8d3d240bda9f0399b2acf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minInterval: 3
+  minInterval: 5
   maxInterval: 10
   laserBeamPrefab: {fileID: 647720825119124714, guid: e68916ee64d909549becefc1dd397f80, type: 3}

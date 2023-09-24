@@ -10,6 +10,8 @@ public class LaserSpawner : MonoBehaviour
     [SerializeField]
     private GameObject laserTrapPrefab;
 
+    private List<LaserTrap> laserTraps = new List<LaserTrap>(); // List for kept the LaserTraps
+
     // Start is called before the first frame update
     void Start()
     {
