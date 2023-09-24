@@ -6,7 +6,6 @@ public class LaserSpawner : MonoBehaviour
 {
     Vector3[] laserTrapPositions = new Vector3[4];
 
-
     [SerializeField]
     private GameObject laserTrapPrefab;
 
