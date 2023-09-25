@@ -5,17 +5,15 @@ using UnityEngine;
 public class LaserTrap : MonoBehaviour
 {
     [SerializeField]
-    private float minInterval = 5f;
+    private float minInterval = 1f;
     [SerializeField]
-    private float maxInterval = 10f;
+    private float maxInterval = 3f;
 
-    int laserBeamCount = 0;
     bool shooting = false;
     float nextShootTime = 0f;
     float timer = 0f;
 
     float runningTime = 1.5f;
-    float speed = 5f;
 
     [SerializeField]
     private GameObject laserBeamPrefab;
@@ -25,27 +23,6 @@ public class LaserTrap : MonoBehaviour
     void Start()
     {
         StartShooting();
-        StopShooting();
-    }
-
-    void SetNextShootTime()
-    {
-        nextShootTime = Time.time + Random.Range(minInterval, maxInterval);
-    }
-
-    public void LaserShoot()
-    {
-        if (laserBeamCount < 2)
-        {
-        GameObject laserBeam = Instantiate(laserBeamPrefab, transform.position, Quaternion.identity);
-        LaserMovement laserMovement = laserBeam.GetComponent<LaserMovement>();
-        laserMovement.InitializeMovement();
-        laserBeamCount++;
-        }
-        else
-        {
-            StopShooting();
-        }
     }
     // Update is called once per frame
     void Update()
@@ -61,6 +38,24 @@ public class LaserTrap : MonoBehaviour
             }
         }
 
+    }
+    void SetNextShootTime()
+    {
+        nextShootTime = Time.time + Random.Range(minInterval, maxInterval);
+    }
+
+    public void LaserShoot()
+    {
+        if (shooting)
+        {
+            GameObject laserBeam = Instantiate(laserBeamPrefab, transform.position, Quaternion.identity);
+            LaserMovement laserMovement = laserBeam.GetComponent<LaserMovement>();
+            laserMovement.InitializeMovement();
+        }
+        else
+        {
+            StopShooting();
+        }
     }
     public void StartShooting()
     {

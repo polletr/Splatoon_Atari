@@ -8,6 +8,7 @@ TagManager:
   - PlayerTwo
   - FloorSquare
   - PaintBucket
+  - Laser
   layers:
   - Default
   - TransparentFX

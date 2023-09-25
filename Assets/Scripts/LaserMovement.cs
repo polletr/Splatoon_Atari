@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class LaserMovement : MonoBehaviour
 {
-    float speed = 5f;
+    float speed = 1f;
+
+    float northLimit = 0.45f;
+    float southLimit = -0.45f;
+    float eastLimit = 0.75f;
+    float westLimit = -0.75f;
+
+    float laserXPosition = 0f;
+    float laserYPosition = 0f;
 
     Vector3 direction;
 
@@ -18,13 +26,17 @@ public class LaserMovement : MonoBehaviour
     public void InitializeMovement()
     {
         direction = Random.insideUnitCircle.normalized;
+        Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, direction);
+        transform.rotation = targetRotation;
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.Translate(direction * Time.deltaTime * speed);
-        if(!IsInCameraView())
+        laserXPosition = transform.position.x;
+        laserYPosition = transform.position.y;
+        if (laserXPosition >= eastLimit || laserXPosition <= westLimit || laserYPosition >= northLimit || laserYPosition <= southLimit)//!IsInCameraView())
         {
             Destroy(gameObject);
         }

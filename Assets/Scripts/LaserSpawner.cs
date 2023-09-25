@@ -14,10 +14,10 @@ public class LaserSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        laserTrapPositions[0] = new Vector3(-1.5f, 1.5f, 0f);
-        laserTrapPositions[1] = new Vector3(1.5f, -1.5f, 0f);
-        laserTrapPositions[2] = new Vector3(-1.5f, -1.5f, 0f);
-        laserTrapPositions[3] = new Vector3(1.5f, 1.5f, 0f);
+        laserTrapPositions[0] = new Vector3(0.1875f, 0.225f, 0f);
+        laserTrapPositions[1] = new Vector3(-0.1875f, -0.225f, 0f);
+        laserTrapPositions[2] = new Vector3(0.1875f, -0.225f, 0f);
+        laserTrapPositions[3] = new Vector3(-0.1875f, 0.225f, 0f);
 
         for (int i = 0; i < laserTrapPositions.Length; i++)
         {

@@ -12,6 +12,10 @@ public class PlayerController : MonoBehaviour
     private float dirX;
     private float dirY;
 
+    //variables implemented to available the stun mechanic
+    private float speedReductionTime = 0f;
+    private bool isSpeedReduced = false;
+
     [SerializeField]
     private float moveSpeed;
 
@@ -75,8 +79,16 @@ public class PlayerController : MonoBehaviour
             selectedSquare.GetComponent<SpriteRenderer>().color = paintColor;
             colorAmmo -= 1;
         }
-
-
+        //Implementing the stun on the moveSpeed variable
+        if (speedReductionTime > 0)
+        {
+            speedReductionTime -= Time.deltaTime;
+            if (speedReductionTime <= 0)
+            {
+                moveSpeed = 0.5f;
+                isSpeedReduced = false;
+            }
+        }
     }
 
     private void FixedUpdate()
@@ -96,6 +108,13 @@ public class PlayerController : MonoBehaviour
         {
             colorAmmo += 1;
             Destroy(other.gameObject);
+        }
+        //Checking if the player collided with a laser beam
+        if (other.CompareTag("Laser"))
+        {
+            speedReductionTime = 2.0f;
+            moveSpeed = 0.1f;
+            isSpeedReduced = true;
         }
     }
 
