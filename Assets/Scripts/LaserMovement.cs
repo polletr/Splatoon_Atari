@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LaserMovement : MonoBehaviour
 {
-    float speed = 1f;
+    float speed = 2f;
 
     float northLimit = 0.45f;
     float southLimit = -0.45f;
@@ -16,6 +16,7 @@ public class LaserMovement : MonoBehaviour
 
     Vector3 direction;
 
+    LaserTrap laserTrap;
 
     // Start is called before the first frame update
     void Start()
@@ -23,9 +24,11 @@ public class LaserMovement : MonoBehaviour
         
     }
 
-    public void InitializeMovement()
+    public void InitializeMovement(Quaternion trapRotation)
     {
-        direction = Random.insideUnitCircle.normalized;
+        //direction = Random.insideUnitCircle.normalized;
+        direction = trapRotation * Vector3.up;
+
         Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, direction);
         transform.rotation = targetRotation;
     }
@@ -33,10 +36,10 @@ public class LaserMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(direction * Time.deltaTime * speed);
+        transform.Translate(Vector3.down * Time.deltaTime * speed);
         laserXPosition = transform.position.x;
         laserYPosition = transform.position.y;
-        if (laserXPosition >= eastLimit || laserXPosition <= westLimit || laserYPosition >= northLimit || laserYPosition <= southLimit)//!IsInCameraView())
+        if (laserXPosition >= eastLimit || laserXPosition <= westLimit || laserYPosition >= northLimit || laserYPosition <= southLimit)
         {
             Destroy(gameObject);
         }

@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3200828338816652652}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.5, y: 1.5, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 0.07996538, g: 0.9339623, b: 0.04111775, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 67cf6a1578b92354e98f05c1bab99dfb, type: 3}
+  m_Color: {r: 0.7529412, g: 0.40784314, b: 0.28235295, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -102,8 +102,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.21133333}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.07, y: 0.13}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29f8ad24dc8d3d240bda9f0399b2acf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minInterval: 5
-  maxInterval: 10
+  minInterval: 0.05
+  maxInterval: 0.1
   laserBeamPrefab: {fileID: 647720825119124714, guid: e68916ee64d909549becefc1dd397f80, type: 3}
+  spawnDistance: -0.1
