@@ -21,17 +21,21 @@ public class LaserTrap : MonoBehaviour
     [SerializeField]
     private float spawnDistance;
 
+    [SerializeField]
+    private float startShootingTimer;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        StartShooting();
     }
     // Update is called once per frame
     void Update()
     {
-        if (shooting)
+        timer += Time.deltaTime;
+        if (timer >= startShootingTimer)
         {
+            shooting = true;
             timer += Time.deltaTime;
 
             if (Time.time >= nextShootTime)
@@ -61,10 +65,6 @@ public class LaserTrap : MonoBehaviour
         {
             StopShooting();
         }
-    }
-    public void StartShooting()
-    {
-        shooting = true;
     }
     public void StopShooting()
     {

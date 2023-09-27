@@ -21,19 +21,19 @@ public class LaserSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timer = spawnInterval;
+        timer = 0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
+        timer += Time.deltaTime;
 
-        if(timer <= 0f)
+        if(timer >= spawnInterval)
         {
             SpawnLaserTrap();
 
-            timer = spawnInterval;
+            timer = 0f;
         }
     }
 

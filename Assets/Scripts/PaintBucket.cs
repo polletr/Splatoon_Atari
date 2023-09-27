@@ -45,7 +45,7 @@ public class PaintBucket : MonoBehaviour
         while (timer < destroyLimit)
         {
             objRend.enabled = !objRend.enabled;
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.3f);
         }
 
         Destroy(gameObject);

@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class GroundManager : MonoBehaviour
 {
-    bool redPainted = false;
-    bool bluePainted = false;
-
     [SerializeField]
     private GameObject squarePrefab;
     
