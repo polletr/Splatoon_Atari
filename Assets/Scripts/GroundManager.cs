@@ -21,7 +21,7 @@ public class GroundManager : MonoBehaviour
         int i = 0;
             for (int j = 0; j < 10; j++)
             {
-                for (int k = 0; k < 6; k++)
+                for (int k = 0; k < 5; k++)
                 {
                     squarePositions[i] = new Vector2(startPos.x + j * 0.15f, startPos.y - k * 0.15f);
                     i++;

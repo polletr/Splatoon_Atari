@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+
+    private int pOnePoints;
+    private int pTwoPoints;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +21,35 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
+    public void AddPoints(Color tileColor, string player)
+    {
+        if (tileColor == Color.white)
+        {
+            if (player == "PlayerOne")
+            {
+                pOnePoints++;
+            }
+            else if (player == "PlayerTwo")
+            {
+                pTwoPoints++;
+            }
+        }
+        else
+        {
+            if (player == "PlayerOne")
+            {
+                pOnePoints++;
+                pTwoPoints--;
+            }
+            else if (player == "PlayerTwo")
+            {
+                pTwoPoints++;
+                pOnePoints--;
+            }
+        }
+        Debug.Log(pOnePoints + "/" + pTwoPoints);
+
+    }
+
 }

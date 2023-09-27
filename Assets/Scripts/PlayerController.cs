@@ -25,11 +25,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Color paintColor;
 
+    private Color tileColor;
+
     private SpriteRenderer _spriteRenderer;
 
     private GameObject selectedSquare;
 
     private int colorAmmo = 0;
+
+    public UnityEvent<Color, string> onPaintingTile;
 
     // Start is called before the first frame update
     void Start()
@@ -64,6 +68,7 @@ public class PlayerController : MonoBehaviour
                 {
                     minDistance = distance;
                     selectedSquare = square;
+                    tileColor = selectedSquare.GetComponent<SpriteRenderer>().color;
                     // Now 'selectedSquare' will contain the square we want to iterate with
                 }
             }
@@ -74,10 +79,13 @@ public class PlayerController : MonoBehaviour
         }
 
         //Painting the selected square
-        if (((Input.GetButtonDown("Fire2") && tag == "PlayerOne") || (Input.GetButtonDown("Fire1") && tag == "PlayerTwo")) && colorAmmo > 0 && selectedSquare.GetComponent<SpriteRenderer>().color != paintColor)
+        if (((Input.GetButtonDown("Fire2") && tag == "PlayerOne") || (Input.GetButtonDown("Fire1") && tag == "PlayerTwo")) && colorAmmo > 0 && tileColor != paintColor)
         {
+            onPaintingTile.Invoke(tileColor, this.tag);
+
             selectedSquare.GetComponent<SpriteRenderer>().color = paintColor;
             colorAmmo -= 1;
+
         }
         //Implementing the stun on the moveSpeed variable
         if (speedReductionTime > 0)
