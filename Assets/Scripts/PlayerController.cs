@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //Painting the selected square
-        if (((Input.GetButtonDown("Fire2") && tag == "PlayerOne") || (Input.GetButtonDown("Fire1") && tag == "PlayerTwo")) && colorAmmo > 0)
+        if (((Input.GetButtonDown("Fire2") && tag == "PlayerOne") || (Input.GetButtonDown("Fire1") && tag == "PlayerTwo")) && colorAmmo > 0 && selectedSquare.GetComponent<SpriteRenderer>().color != paintColor)
         {
             selectedSquare.GetComponent<SpriteRenderer>().color = paintColor;
             colorAmmo -= 1;
