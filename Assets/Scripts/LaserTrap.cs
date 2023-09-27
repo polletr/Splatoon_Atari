@@ -5,9 +5,9 @@ using UnityEngine;
 public class LaserTrap : MonoBehaviour
 {
     [SerializeField]
-    private float minInterval = 1f;
+    private float minInterval = 0.01f;
     [SerializeField]
-    private float maxInterval = 3f;
+    private float maxInterval = 0.05f;
 
     bool shooting = false;
     float nextShootTime = 0f;
@@ -17,6 +17,9 @@ public class LaserTrap : MonoBehaviour
 
     [SerializeField]
     private GameObject laserBeamPrefab;
+
+    [SerializeField]
+    private float spawnDistance;
 
 
     // Start is called before the first frame update
@@ -48,9 +51,11 @@ public class LaserTrap : MonoBehaviour
     {
         if (shooting)
         {
-            GameObject laserBeam = Instantiate(laserBeamPrefab, transform.position, Quaternion.identity);
+            Vector3 spawnPosition = transform.position + transform.up * spawnDistance;
+
+            GameObject laserBeam = Instantiate(laserBeamPrefab, spawnPosition, Quaternion.identity);
             LaserMovement laserMovement = laserBeam.GetComponent<LaserMovement>();
-            laserMovement.InitializeMovement();
+            laserMovement.InitializeMovement(transform.rotation);
         }
         else
         {
