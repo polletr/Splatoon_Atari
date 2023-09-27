@@ -4,32 +4,53 @@ using UnityEngine;
 
 public class LaserSpawner : MonoBehaviour
 {
-    Vector3[] laserTrapPositions = new Vector3[4];
+    [SerializeField]
+    private List<Transform> spawnPoints = new List<Transform>();
+
+    [SerializeField]
+    private List<Vector3> spawnRotations = new List<Vector3>();
 
     [SerializeField]
     private GameObject laserTrapPrefab;
 
-    private List<LaserTrap> laserTraps = new List<LaserTrap>(); // List for kept the LaserTraps
+    private float spawnInterval = 8f;
+    private float timer = 0f;
+
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        laserTrapPositions[0] = new Vector3(0.1875f, 0.225f, 0f);
-        laserTrapPositions[1] = new Vector3(-0.1875f, -0.225f, 0f);
-        laserTrapPositions[2] = new Vector3(0.1875f, -0.225f, 0f);
-        laserTrapPositions[3] = new Vector3(-0.1875f, 0.225f, 0f);
-
-        for (int i = 0; i < laserTrapPositions.Length; i++)
-        {
-            GameObject instantiateLaserTrap = Instantiate(laserTrapPrefab, laserTrapPositions[i], Quaternion.identity);
-        }
-
-
+        timer = spawnInterval;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        timer -= Time.deltaTime;
+
+        if(timer <= 0f)
+        {
+            SpawnLaserTrap();
+
+            timer = spawnInterval;
+        }
+    }
+
+    void SpawnLaserTrap()
+    {
+        if (spawnPoints.Count > 0)
+        {
+            int randomIndex = Random.Range(0, spawnPoints.Count);
+            Transform spawnPoint = spawnPoints[randomIndex];
+
+            Vector3 spawnRotation = spawnRotations[randomIndex];
+
+            Quaternion rotation = Quaternion.Euler(spawnRotation);
+
+            GameObject laserTrap = Instantiate(laserTrapPrefab, spawnPoint.position, rotation);
+
+            Destroy(laserTrap, 8f);
+        }
     }
 }
