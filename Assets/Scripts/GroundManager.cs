@@ -10,7 +10,7 @@ public class GroundManager : MonoBehaviour
     [SerializeField]
     private GameObject squarePrefab;
     
-    private Vector2[] squarePositions = new Vector2[60];
+    private Vector2[] squarePositions = new Vector2[50];
 
     [SerializeField]
     private Vector2 startPos;

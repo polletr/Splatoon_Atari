@@ -19,9 +19,9 @@ public class CollectableSpawner : MonoBehaviour
 
     private float maxX = 0.675f;
 
-    private float minY = -0.375f;
+    private float minY = -0.305f;
 
-    private float maxY = 0.375f;
+    private float maxY = 0.305f;
 
     [SerializeField]
     private float timeToSpawn;
