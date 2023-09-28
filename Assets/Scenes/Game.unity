@@ -423,7 +423,7 @@ MonoBehaviour:
   m_text: 'Player 1:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
-  m_sharedMaterial: {fileID: 6533941415231273931, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -486,7 +486,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 125.65691, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &164565266
@@ -641,7 +641,7 @@ MonoBehaviour:
   m_text: 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
-  m_sharedMaterial: {fileID: 6533941415231273931, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -704,7 +704,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &298698017
@@ -887,7 +887,7 @@ MonoBehaviour:
   m_text: Winner!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
-  m_sharedMaterial: {fileID: 6533941415231273931, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
+  m_sharedMaterial: {fileID: 7226853986916763447, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -950,7 +950,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 120.42906}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &381250299
@@ -1150,7 +1150,7 @@ MonoBehaviour:
   m_text: Survivor Painter
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
-  m_sharedMaterial: {fileID: 6533941415231273931, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
+  m_sharedMaterial: {fileID: 7226853986916763447, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1213,7 +1213,7 @@ MonoBehaviour:
   m_margin: {x: 4.763954, y: 0, z: 3.4646912, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &613198169
@@ -1454,7 +1454,7 @@ MonoBehaviour:
     Ready'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
-  m_sharedMaterial: {fileID: 6533941415231273931, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
+  m_sharedMaterial: {fileID: 7226853986916763447, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1517,7 +1517,7 @@ MonoBehaviour:
   m_margin: {x: 4.330864, y: -12.99263, z: 100.043175, w: -55.00209}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &713432757
@@ -1775,7 +1775,7 @@ MonoBehaviour:
   m_text: Press "G" or "Enter" to Restart
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
-  m_sharedMaterial: {fileID: 6533941415231273931, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
+  m_sharedMaterial: {fileID: 7226853986916763447, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1838,7 +1838,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 14.674324, z: 0, w: 120.42906}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &787923196
@@ -2577,7 +2577,7 @@ MonoBehaviour:
   m_text: 'Player 2:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
-  m_sharedMaterial: {fileID: 6533941415231273931, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2640,7 +2640,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 125.65691, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1318226568
@@ -2898,7 +2898,7 @@ MonoBehaviour:
   m_text: 01:30
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
-  m_sharedMaterial: {fileID: 6533941415231273931, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2961,7 +2961,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1447655823
@@ -3041,7 +3041,7 @@ MonoBehaviour:
     Press "G" to get Ready'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
-  m_sharedMaterial: {fileID: 6533941415231273931, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
+  m_sharedMaterial: {fileID: 7226853986916763447, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3104,7 +3104,7 @@ MonoBehaviour:
   m_margin: {x: 4.330864, y: -13.42572, z: 100.476265, w: -55.00209}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1481198423
@@ -4038,7 +4038,7 @@ MonoBehaviour:
   m_text: winning player here
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
-  m_sharedMaterial: {fileID: 6533941415231273931, guid: ee54db545f1e2bc4d84ebf19db69e2a3, type: 2}
+  m_sharedMaterial: {fileID: 0}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4101,7 +4101,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 120.42906}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2064590895
