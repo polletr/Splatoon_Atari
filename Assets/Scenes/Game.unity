@@ -1541,6 +1541,7 @@ GameObject:
   - component: {fileID: 719597556}
   - component: {fileID: 719597555}
   - component: {fileID: 719597560}
+  - component: {fileID: 719597561}
   m_Layer: 0
   m_Name: Player2
   m_TagString: PlayerTwo
@@ -1640,12 +1641,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 20f3c12cb424bab4eb365669d17dcefc, type: 3}
+  m_Sprite: {fileID: -1165940142, guid: b42f1d7ee287cd34b925b29f4aa9763f, type: 3}
   m_Color: {r: 0.50980395, g: 0.062745094, b: 0.15555222, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.08, y: 0.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1684,7 +1685,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.08, y: 0.1}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 0.08, y: 0.1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -1692,6 +1693,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.08, y: 0.1}
   m_EdgeRadius: 0
+--- !u!95 &719597561
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719597554}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b1ea37d0157a1a04eb46f1d397e06418, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &787923193
 GameObject:
   m_ObjectHideFlags: 0
@@ -2850,7 +2872,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -17.0103}
+  m_AnchoredPosition: {x: 0, y: -17.010254}
   m_SizeDelta: {x: 192, y: 34.0205}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1447655822
