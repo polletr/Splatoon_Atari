@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
 
     private int colorAmmo = 0;
 
-    public UnityEvent<Color, string> onPaintingTile;
+    public UnityEvent<Color, string, Color> onPaintingTile;
 
     // Start is called before the first frame update
     void Start()
@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
         //Painting the selected square
         if (((Input.GetButtonDown("Fire2") && tag == "PlayerOne") || (Input.GetButtonDown("Fire1") && tag == "PlayerTwo")) && colorAmmo > 0 && tileColor != paintColor)
         {
-            onPaintingTile.Invoke(tileColor, this.tag);
+            onPaintingTile.Invoke(tileColor, this.tag, playerColor);
 
             selectedSquare.GetComponent<SpriteRenderer>().color = paintColor;
             colorAmmo -= 1;
