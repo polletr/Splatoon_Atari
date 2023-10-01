@@ -51,6 +51,8 @@ public class GameManager : MonoBehaviour
     private bool pOneReady;
     private bool pTwoReady;
 
+    [SerializeField]
+    private Color endTimerColor;
 
     // Start is called before the first frame update
     void Start()
@@ -180,6 +182,10 @@ public class GameManager : MonoBehaviour
 
         timerText.text = string.Format("{0:00} : {1:00}", minutes, seconds);
 
+        if (currentTime <= 15f)
+        {
+            timerText.color = endTimerColor;
+        }
     }
 
 }
