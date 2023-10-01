@@ -113,7 +113,7 @@ public class GameManager : MonoBehaviour
             else
             {
                 gameTime = 0f;
-                if(pOnePoints>pTwoPoints)
+                if(pOnePoints > pTwoPoints)
                 {
                     OnGameEnd.Invoke("The winner is Player One!", playerColor);
                 }

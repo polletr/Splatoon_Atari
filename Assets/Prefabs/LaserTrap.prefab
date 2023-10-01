@@ -127,5 +127,5 @@ MonoBehaviour:
   minInterval: 0.05
   maxInterval: 0.15
   laserBeamPrefab: {fileID: 647720825119124714, guid: e68916ee64d909549becefc1dd397f80, type: 3}
-  spawnDistance: -0.1
+  spawnDistance: -0.15
   startShootingTimer: 3

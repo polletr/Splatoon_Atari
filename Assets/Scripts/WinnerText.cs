@@ -7,12 +7,12 @@ using TMPro;
 public class WinnerText : MonoBehaviour
 {
 
-    private TMP_Text winText;
+    private TMP_Text _winText;
 
     // Start is called before the first frame update
     void Start()
     {
-        winText = GetComponent<TMP_Text>();
+        _winText = GetComponent<TMP_Text>();
     }
 
     // Update is called once per frame
@@ -23,7 +23,9 @@ public class WinnerText : MonoBehaviour
 
     public void OnWinning(string pText, Color playerColor)
     {
-        winText.text = pText;
-        winText.color = playerColor;
+        _winText = GetComponent<TMP_Text>();
+
+        _winText.text = pText;
+        _winText.color = playerColor;
     }
 }
