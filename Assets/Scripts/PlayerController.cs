@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour
     private int colorAmmo = 0;
 
     public UnityEvent<Color, string, Color> onPaintingTile;
+    public UnityEvent onPickUpBucket;
+
 
     // Start is called before the first frame update
     void Start()
@@ -114,6 +116,7 @@ public class PlayerController : MonoBehaviour
 
         if (other.CompareTag("PaintBucket") && other.gameObject.GetComponent<SpriteRenderer>().color == playerColor)
         {
+            onPickUpBucket.Invoke();
             colorAmmo += 1;
             Destroy(other.gameObject);
         }

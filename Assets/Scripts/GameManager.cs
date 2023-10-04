@@ -44,6 +44,8 @@ public class GameManager : MonoBehaviour
 
     private float count;
 
+    private float timer;
+
     private TMP_Text defaultOneControlsText;
 
     private TMP_Text defaultTwoControlsText;
@@ -53,6 +55,10 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     private Color endTimerColor;
+
+    public UnityEvent OnShowRestart;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -108,7 +114,7 @@ public class GameManager : MonoBehaviour
 
         if (gameStarted)
         {
-            if(gameTime >0)
+            if(gameTime > 0)
             {
                 gameTime -= Time.deltaTime;
             }
@@ -132,12 +138,22 @@ public class GameManager : MonoBehaviour
             updateTimer(gameTime);
         }
 
-        if (gameEnd && (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2")))
+        if (gameEnd)
         {
-            string currentSceneName = SceneManager.GetActiveScene().name;
-            SceneManager.LoadScene(currentSceneName);
-        }
+            timer += Time.deltaTime;
+            if (timer >5f)
+            {
+                OnShowRestart.Invoke();
 
+                if ((Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2")))
+                {
+                    string currentSceneName = SceneManager.GetActiveScene().name;
+                    SceneManager.LoadScene(currentSceneName);
+                }
+
+            }
+
+        }
     }
 
     public void AddPoints(Color tileColor, string player, Color pColor)
@@ -187,5 +203,6 @@ public class GameManager : MonoBehaviour
             timerText.color = endTimerColor;
         }
     }
+
 
 }
